@@ -18,6 +18,17 @@ You → Perplexity (plan) → /spec/sessions/[date]-[topic]/handoff.md
 
 ---
 
+## Prompt Quality Modes
+
+Use this split before every planning or execution session:
+
+- Detailed prompt mode: clear goal, scope, constraints, acceptance criteria
+- Vague prompt mode: one or more of the above missing
+
+If vague, run `docs/PROJECT-CLARITY-INTAKE.md` first. Do not start irreversible implementation until blocking questions are resolved or explicitly defaulted.
+
+---
+
 ## How to Start a Planning Session (Perplexity)
 
 ### Step 1 — Create the session folder
@@ -53,6 +64,15 @@ Today's focus: [describe what you want to plan or decide]
 [Your question or task]
 ```
 
+If the prompt is vague, add this block before "Today's focus":
+
+```
+Before planning, run a gap analysis and ask up to 7 blocking questions.
+Group questions by: outcome, scope, users, constraints, content/data,
+integrations, and acceptance criteria.
+Label any defaults as assumptions with confidence (high/medium/low).
+```
+
 > Tip: You don't need to paste every file every time. Always paste `context.md`, `config-matrix.md`, `progress.md`, and `next-session.md`. Paste `decisions.md` (last 5) and the last `executor.md` for continuity. Paste `constraints.md` when working on anything with edge case risk.
 
 ### Step 3 — Work through the session
@@ -68,6 +88,16 @@ Please write:
 1. planner.md for this session — your notes, decisions, and research summary
 2. handoff.md — the specific instructions for the coding agent
 Use the output format from AGENTS.md.
+```
+
+Also require this explicit section in planner output:
+
+```
+3. assumptions.md style section inside planner.md:
+	- Assumption
+	- Confidence (high/medium/low)
+	- Verification path
+	- Impact if wrong
 ```
 
 Paste the output into the correct session folder files. Commit and push.
@@ -96,6 +126,13 @@ Current session folder: spec/sessions/YYYY-MM-DD-NNN-topic/
 Your instructions are in: spec/sessions/YYYY-MM-DD-NNN-topic/handoff.md
 
 Begin only after you have confirmed you have read all required spec files.
+```
+
+For vague tasks, append:
+
+```
+If any blocking ambiguity remains, pause and ask compact grouped questions
+before coding. Do not assume missing constraints as facts.
 ```
 
 Let the agent confirm it has read everything before it starts coding.
@@ -200,6 +237,23 @@ You only do this once per project. After that, the custom instructions are alway
 
 ---
 
+## Failure Pattern Prevention
+
+When output quality drops, it is usually due to one of these:
+
+1. Missing constraints interpreted as freedom
+2. Generic assumptions treated as product facts
+3. No objective acceptance criteria
+4. Unverified third-party behavior
+
+Corrective action:
+
+1. Re-run the intake checklist in `docs/PROJECT-CLARITY-INTAKE.md`
+2. Update `spec/core/context.md`, `spec/core/config-matrix.md`, and `spec/core/constraints.md`
+3. Regenerate handoff with explicit assumptions and pass/fail checks
+
+---
+
 ## Naming Conventions
 
 **Session folders:** `YYYY-MM-DD-NNN-short-topic-slug`
@@ -217,4 +271,3 @@ You only do this once per project. After that, the custom instructions are alway
 **Branch names:**
 
 - `feature/NNN-short-topic` matching session number where applicable
-

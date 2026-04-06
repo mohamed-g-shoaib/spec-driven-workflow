@@ -54,13 +54,14 @@ The `/spec` folder is the single source of truth. Agents never rely on chat hist
 
 ## What's Included
 
-| File                                        | Purpose                                                                                                                                           |
-| ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `AGENTS.md`                                 | Instructions for coding agents — architecture rules, how to read spec, how to write back, output formats                                          |
-| `docs/SESSION-GUIDE.md`                     | Your personal operating manual — how to start, close, and hand off sessions. Lives in this workflow repo only. Do not copy it into project repos. |
-| `spec/core/*.md`                            | Pre-filled core files ready to be adapted to your project                                                                                         |
-| `spec/status/*.md`                          | Pre-filled status files with empty starting state                                                                                                 |
-| `spec/sessions/2025-01-20-001-preparation/` | A complete example session (planner, handoff, executor) showing exactly how each file should look                                                 |
+| File                             | Purpose                                                                                                                                           |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `AGENTS.md`                      | Instructions for coding agents — architecture rules, how to read spec, how to write back, output formats                                          |
+| `docs/SESSION-GUIDE.md`          | Your personal operating manual — how to start, close, and hand off sessions. Lives in this workflow repo only. Do not copy it into project repos. |
+| `docs/PROJECT-CLARITY-INTAKE.md` | Intake checklist for vague prompts. Defines what must be clarified before implementation.                                                         |
+| `spec/core/*.md`                 | Pre-filled core files ready to be adapted to your project                                                                                         |
+| `spec/status/*.md`               | Pre-filled status files with empty starting state                                                                                                 |
+| `spec/sessions/.gitkeep`         | Empty placeholder so the sessions folder is tracked by git                                                                                        |
 
 ---
 
@@ -72,10 +73,25 @@ The `/spec` folder is the single source of truth. Agents never rely on chat hist
 4. **Edit `spec/core/stack.md`** — replace with your confirmed tech choices
 5. **Clear `spec/core/decisions.md`** — remove any example decisions, keep the format header
 6. **Clear `spec/core/constraints.md`** — remove any example rules, keep your own non-negotiables
-7. **Delete the example session folder** — `spec/sessions/2025-01-20-001-preparation/`
-8. **Update `AGENTS.md`** — replace any project-specific config matrix section with your project's details
+7. **Keep `spec/sessions/.gitkeep` until first real session** — then create `spec/sessions/YYYY-MM-DD-NNN-topic/`
+8. **Update `AGENTS.md`** — add project-specific architecture rules and constraints where needed
 9. **Copy only `AGENTS.md` and `spec/` into your project repo** — leave `docs/SESSION-GUIDE.md` here. It is your personal reference, not a project artifact.
-10. **Adapt your planning agent's custom instructions** — use the Perplexity template in `docs/SESSION-GUIDE.md` as a starting point
+10. **Adapt your planning agent's custom instructions** — use `docs/PLANNER-INSTRUCTIONS.md`
+
+---
+
+## Working With Vague Prompts
+
+If a user prompt is underspecified, do not jump directly to implementation.
+
+Required process:
+
+1. Run the intake checklist in `docs/PROJECT-CLARITY-INTAKE.md`
+2. Resolve blocking ambiguities before irreversible work
+3. Label defaults as assumptions, not facts
+4. Log assumptions and confidence in session notes
+
+This prevents AI quality degradation from silent assumptions.
 
 ---
 
@@ -139,13 +155,7 @@ The planning workflow is designed for Perplexity but works with any research-cap
 
 ## Example Session
 
-A complete worked example is included in:
-
-```
-spec/sessions/2025-01-20-001-preparation/
-```
-
-It shows a real preparation session example — including a `planner.md` with research and decisions, a `handoff.md` with step-by-step executor instructions, and an `executor.md` showing how the coding agent reported back, including deviations and edge cases discovered during implementation.
+No sample session is included by default. Create real session folders under `spec/sessions/YYYY-MM-DD-NNN-topic/` as you work.
 
 ---
 

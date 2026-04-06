@@ -6,24 +6,27 @@
 ---
 
 ## [Dimension 1]
+
 - Option A
 - Option B
 - Option C
 
 ## [Dimension 2]
+
 - Option A
 - Option B
 
 ## [Dimension 3]
+
 - Option A
 - Option B
 - Option C
 
 ## Compatibility Rules
 
-| If Selected | Conflicts With | Resolution |
-|-------------|----------------|------------|
-| [Option] | [Option] | [How resolver handles it] |
+| If Selected | Conflicts With | Resolution                |
+| ----------- | -------------- | ------------------------- |
+| [Option]    | [Option]       | [How resolver handles it] |
 
 ## Validation Rules
 

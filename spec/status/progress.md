@@ -6,19 +6,26 @@
 ---
 
 ## Current Phase
+
 **Pre-development** — Setup only. No feature code yet.
 
 ## Done
+
 - [x] spec-driven-workflow system initialized
 - [x] AGENTS.md configured
 - [x] spec/core/ files initialized
 - [x] spec/status/ files initialized
+- [x] ambiguity-handling guardrails added
+- [x] assumption and verification workflow added
 
 ## In Progress
+
 - [ ] [Add first real task]
 
 ## Blocked
+
 - Nothing blocked
 
 ## Not Started
+
 - [ ] [List all planned work here]

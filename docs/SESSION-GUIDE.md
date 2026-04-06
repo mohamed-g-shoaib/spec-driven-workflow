@@ -1,6 +1,8 @@
-# Session Workflow Guide — How to Use Forge's Agent System
+# Session Workflow Guide
 
 This is your personal reference for running planning and execution sessions. Read this once and keep it handy.
+
+Before your first session, configure your planning agent using the template in `docs/PLANNER-INSTRUCTIONS.md`. The generic template works for any project. The Forge example shows a fully filled-in version.
 
 ---
 
@@ -167,6 +169,18 @@ Your next task is in spec/status/next-session.md.
 ```
 
 The agent should never need your chat history. If it does, the spec files are incomplete — update them.
+
+---
+
+## Setting Up Your Planning Agent (First Time Only)
+
+1. Open `docs/PLANNER-INSTRUCTIONS.md`
+2. Copy the **Generic Template** section
+3. Fill in every placeholder for your project
+4. Paste into your planning agent's custom instructions UI (Perplexity: Settings → Custom Instructions, or equivalent)
+5. The Forge example in the same file shows exactly what a filled-in version looks like
+
+You only do this once per project. After that, the custom instructions are always active and you just paste spec file contents at the start of each session.
 
 ---
 

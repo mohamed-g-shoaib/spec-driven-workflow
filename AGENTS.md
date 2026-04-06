@@ -184,6 +184,7 @@ When writing to any spec file, follow these rules:
 - **Auth:** None · Better Auth · NextAuth/Auth.js · Supabase Auth
 - **Theming:** Light/Dark + named themes from tweakcn via shared theme utility
 - **Git:** init or not
+- **Marketing website:** Next.js (App Router) · shadcn/ui · Oxlint+Oxfmt · soundcn · deployed on Vercel — see `spec/core/stack.md`
 
 Full rules and conflict resolution in `spec/core/config-matrix.md`.
 

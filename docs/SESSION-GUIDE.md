@@ -2,7 +2,7 @@
 
 This is your personal reference for running planning and execution sessions. Read this once and keep it handy.
 
-Before your first session, configure your planning agent using the template in `docs/PLANNER-INSTRUCTIONS.md`. The generic template works for any project. The Forge example shows a fully filled-in version.
+Before your first session, configure your planning agent using the template in `docs/PLANNER-INSTRUCTIONS.md`. The generic template works for any project. The [YOUR PROJECT NAME] example shows a fully filled-in version.
 
 ---
 
@@ -158,7 +158,7 @@ Use the same Step 2 prompt from "How to Start a Planning Session" above. Always 
 
 ```
 [CONTEXT HANDOFF]
-I am continuing work on the Forge CLI scaffolding tool.
+I am continuing work on the [YOUR PROJECT NAME].
 Please read AGENTS.md fully. It contains all architecture rules and
 instructions for reading the /spec folder.
 
@@ -178,7 +178,7 @@ The agent should never need your chat history. If it does, the spec files are in
 2. Copy the **Generic Template** section
 3. Fill in every placeholder for your project
 4. Paste into your planning agent's custom instructions UI (Perplexity: Settings → Custom Instructions, or equivalent)
-5. The Forge example in the same file shows exactly what a filled-in version looks like
+5. The [YOUR PROJECT NAME] example in the same file shows exactly what a filled-in version looks like
 
 You only do this once per project. After that, the custom instructions are always active and you just paste spec file contents at the start of each session.
 
@@ -217,3 +217,4 @@ You only do this once per project. After that, the custom instructions are alway
 **Branch names:**
 
 - `feature/NNN-short-topic` matching session number where applicable
+

@@ -67,13 +67,13 @@ The `/spec` folder is the single source of truth. Agents never rely on chat hist
 ## How to Adapt This to Your Project
 
 1. **Fork or clone this repo**
-2. **Edit `spec/core/context.md`** — replace the Forge project description with your project
+2. **Edit `spec/core/context.md`** — replace the placeholder project description with your project
 3. **Edit `spec/core/config-matrix.md`** — replace with your project's configuration dimensions, or delete if not applicable
 4. **Edit `spec/core/stack.md`** — replace with your confirmed tech choices
-5. **Clear `spec/core/decisions.md`** — remove the Forge example decisions, keep the format header
-6. **Clear `spec/core/constraints.md`** — remove the Forge-specific rules, keep your own non-negotiables
+5. **Clear `spec/core/decisions.md`** — remove any example decisions, keep the format header
+6. **Clear `spec/core/constraints.md`** — remove any example rules, keep your own non-negotiables
 7. **Delete the example session folder** — `spec/sessions/2025-01-20-001-preparation/`
-8. **Update `AGENTS.md`** — replace the Forge-specific config matrix section with your project's details
+8. **Update `AGENTS.md`** — replace any project-specific config matrix section with your project's details
 9. **Copy only `AGENTS.md` and `spec/` into your project repo** — leave `docs/SESSION-GUIDE.md` here. It is your personal reference, not a project artifact.
 10. **Adapt your planning agent's custom instructions** — use the Perplexity template in `docs/SESSION-GUIDE.md` as a starting point
 
@@ -145,7 +145,7 @@ A complete worked example is included in:
 spec/sessions/2025-01-20-001-preparation/
 ```
 
-It shows a real preparation session for the Forge CLI project — including a `planner.md` with research and decisions, a `handoff.md` with step-by-step executor instructions, and an `executor.md` showing how the coding agent reported back, including deviations and edge cases discovered during implementation.
+It shows a real preparation session example — including a `planner.md` with research and decisions, a `handoff.md` with step-by-step executor instructions, and an `executor.md` showing how the coding agent reported back, including deviations and edge cases discovered during implementation.
 
 ---
 
